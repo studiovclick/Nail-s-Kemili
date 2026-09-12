@@ -1,0 +1,706 @@
+/*
+  Arquivo principal de estilo do site Nail's Design de Cílios.
+  A paleta utiliza tons suaves, femininos e elegantes,
+  com destaque para o branco cremoso, blush e dourado sutil.
+*/
+
+:root {
+  --bg: #fffaf9;
+  --bg-strong: #f5edf0;
+  --card: #ffffff;
+  --card-soft: #fdf2f5;
+  --primary: #d88fa5;
+  --primary-dark: #b8627d;
+  --accent: #eac7d1;
+  --text: #2d2025;
+  --muted: #6d5c62;
+  --line: rgba(130, 95, 109, 0.18);
+  --success: #6ca884;
+  --shadow: 0 20px 45px rgba(122, 74, 84, 0.12);
+  --radius: 22px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background: linear-gradient(180deg, #fff9f8 0%, #fffdfd 100%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.section-tag,
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.9rem;
+  background: rgba(216, 143, 165, 0.12);
+  border: 1px solid rgba(184, 98, 125, 0.15);
+  color: var(--primary-dark);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+.brand-text {
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 250, 249, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(128, 95, 108, 0.08);
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 84px;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 800;
+}
+
+.brand-text {
+  font-size: clamp(1.7rem, 2vw, 2.3rem);
+  letter-spacing: 0.02em;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.main-nav a {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.9rem 1.5rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  box-shadow: 0 14px 24px rgba(184, 98, 125, 0.2);
+}
+
+.button-secondary {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.4);
+  color: var(--text);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(253, 240, 244, 0.96), rgba(255, 255, 255, 0.92));
+}
+
+.hero-slider {
+  position: relative;
+  min-height: 720px;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  align-items: center;
+}
+
+.hero-slide:nth-child(1) {
+  background-image: linear-gradient(90deg, rgba(30, 20, 22, 0.58), rgba(30, 20, 22, 0.32)), url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=80");
+}
+
+.hero-slide:nth-child(2) {
+  background-image: linear-gradient(90deg, rgba(37, 20, 24, 0.58), rgba(37, 20, 24, 0.22)), url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=80");
+}
+
+.hero-slide:nth-child(3) {
+  background-image: linear-gradient(90deg, rgba(28, 20, 24, 0.66), rgba(28, 20, 24, 0.34)), url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1600&q=80");
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 9rem;
+  padding-bottom: 6rem;
+  max-width: 620px;
+  color: white;
+}
+
+.hero-content h1,
+.hero-content h2 {
+  color: white;
+  font-size: clamp(3rem, 5vw, 5.2rem);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content .hero-text {
+  font-size: 1.12rem;
+  max-width: 36rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1.8rem;
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 0.8rem 1.5rem;
+  color: rgba(255, 255, 255, 0.84);
+  font-weight: 600;
+}
+
+.hero-highlights li::before {
+  content: "•";
+  color: var(--accent);
+  margin-right: 0.5rem;
+}
+
+.about,
+.results,
+.testimonials,
+.services,
+.calendar-section,
+.booking,
+.payments {
+  padding: 6rem 0;
+}
+
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-photo img {
+  width: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.about-copy h2,
+.section-heading h2 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  margin: 1rem 0;
+}
+
+.about-copy p {
+  color: var(--muted);
+  font-size: 1.04rem;
+}
+
+.about-list {
+  list-style: none;
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 0.8rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.about-list li::before {
+  content: "✓";
+  color: var(--success);
+  margin-right: 0.6rem;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.results-grid,
+.testimonial-grid,
+.services-grid,
+.payment-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.results-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.result-card,
+.testimonial-card,
+.service-card,
+.payment-card,
+.schedule-panel,
+.booking-form {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.result-card {
+  padding: 1rem;
+}
+
+.compare-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  min-height: 420px;
+}
+
+.before-panel,
+.after-panel {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.before-panel.is-visible,
+.after-panel.is-visible {
+  opacity: 1;
+}
+
+.compare-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.compare-frame span {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  background: rgba(31, 23, 25, 0.62);
+  color: white;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.result-card h3 {
+  font-size: 2rem;
+  margin: 1.2rem 0 0.4rem;
+}
+
+.compare-toggle {
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  background: var(--card-soft);
+  color: var(--text);
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+}
+
+.testimonial-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.testimonial-card {
+  padding: 1.2rem;
+}
+
+.testimonial-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.7rem;
+}
+
+.testimonial-card p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.video-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  aspect-ratio: 16 / 11;
+}
+
+.video-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.services-grid,
+.payment-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.service-card,
+.payment-card {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.service-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--card-soft), rgba(216, 143, 165, 0.18));
+  font-size: 1.8rem;
+}
+
+.service-card h3,
+.payment-card h3 {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+.service-card p,
+.payment-card p {
+  color: var(--muted);
+}
+
+.highlight-card {
+  background: linear-gradient(135deg, rgba(216, 143, 165, 0.12), rgba(255, 255, 255, 0.8));
+}
+
+.calendar-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.9fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.calendar-day {
+  background: #fdf8fa;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.9rem 0.5rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.calendar-day .weekday {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.calendar-day .date {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.calendar-day.is-available {
+  background: rgba(108, 168, 132, 0.12);
+  border-color: rgba(108, 168, 132, 0.3);
+}
+
+.calendar-day.is-selected {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 18px 24px rgba(184, 98, 125, 0.2);
+}
+
+.calendar-day.is-selected .weekday,
+.calendar-day.is-selected .date {
+  color: white;
+}
+
+.schedule-panel {
+  padding: 1.5rem;
+}
+
+.schedule-panel h3 {
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+
+.time-slots {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.time-button {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.time-button.is-selected {
+  background: var(--text);
+  border-color: var(--text);
+  color: white;
+}
+
+.booking-wrapper {
+  max-width: 880px;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.25rem;
+  padding: 2rem;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.field-wide {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-weight: 700;
+  color: var(--text);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid rgba(97, 73, 81, 0.18);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 0.85rem 1rem;
+  color: var(--text);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.button-full {
+  grid-column: 1 / -1;
+  width: 100%;
+  border: none;
+}
+
+.site-footer {
+  border-top: 1px solid rgba(96, 69, 79, 0.12);
+  background: rgba(255, 250, 249, 0.9);
+  padding: 2rem 0;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-brand {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  color: var(--text);
+}
+
+.footer-contact {
+  text-align: right;
+  color: var(--muted);
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 50;
+  background: linear-gradient(135deg, #25d366, #1cab57);
+  color: white;
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 18px 28px rgba(37, 211, 102, 0.3);
+}
+
+@media (max-width: 960px) {
+  .main-nav {
+    display: none;
+  }
+
+  .about-wrapper,
+  .calendar-layout,
+  .results-grid,
+  .services-grid,
+  .payment-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .testimonial-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero-slider {
+    min-height: 600px;
+  }
+
+  .hero-content {
+    padding-top: 7rem;
+  }
+
+  .about-wrapper,
+  .calendar-layout,
+  .results-grid,
+  .services-grid,
+  .payment-grid,
+  .testimonial-grid,
+  .booking-form {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-wrapper {
+    min-height: 76px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-contact {
+    text-align: center;
+  }
+}

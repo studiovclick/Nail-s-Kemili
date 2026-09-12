@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nail's Design de Cílios em Porto Alegre e região metropolitana. Tratamentos, alongamentos e agendamento online."
+    />
+    <title>Nail's Design de Cílios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- Cabeçalho principal do site -->
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="#top" class="brand" aria-label="Nail's Design de Cílios">
+          <span class="brand-mark">N</span>
+          <span class="brand-text">Nail's</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="#apresentacao">Apresentação</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#resultados">Resultados</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#agenda">Agenda</a>
+          <a href="#pagamentos">Pagamentos</a>
+        </nav>
+
+        <a class="button button-primary" href="#agendar">Agendar</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Seção 1: apresentação do produto com efeito de fade -->
+      <section class="hero" id="apresentacao" aria-label="Apresentação do serviço">
+        <div class="hero-slider">
+          <article class="hero-slide is-active" data-slide="0">
+            <div class="hero-content container">
+              <p class="eyebrow">Cílios com realce natural</p>
+              <h1>Design de cílios que valoriza o seu olhar com delicadeza.</h1>
+              <p class="hero-text">
+                Alongamentos, volume leve e resultados sofisticados para o ritmo de Porto Alegre e região.
+              </p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="#agendar">Agendar avaliação</a>
+                <a class="button button-secondary" href="#resultados">Ver resultados</a>
+              </div>
+              <ul class="hero-highlights">
+                <li>Higienização rigorosa</li>
+                <li>Fios de alta qualidade</li>
+                <li>Atendimento personalizado</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="hero-slide" data-slide="1">
+            <div class="hero-content container">
+              <p class="eyebrow">Estilo de vida</p>
+              <h2>Look impecável, conforto e autoestima em cada olhar.</h2>
+              <p class="hero-text">
+                Sobrancelhas e cílios combinados com uma estética suave, moderna e feminina.
+              </p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="#agendar">💬 Falar no WhatsApp</a>
+                <a class="button button-secondary" href="#sobre">Conhecer a especialista</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-slide" data-slide="2">
+            <div class="hero-content container">
+              <p class="eyebrow">Atendimento exclusivo</p>
+              <h2>Consultoria, estética e cuidado em um ambiente acolhedor.</h2>
+              <p class="hero-text">
+                O serviço é pensado para as necessidades da rotina da região metropolitana de Porto Alegre.
+              </p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="#agenda">Ver horários</a>
+                <a class="button button-secondary" href="#pagamentos">Ver formas de pagamento</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Seção 2: apresentação da responsável pelo serviço -->
+      <section class="about" id="sobre">
+        <div class="container about-wrapper">
+          <div class="about-photo">
+            <img
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+              alt="Especialista em design de cílios"
+            />
+          </div>
+
+          <div class="about-copy">
+            <p class="section-tag">A especialista</p>
+            <h2>Kemili</h2>
+            <p>
+              Especialista em design de cílios com foco em valorização facial, acabamento leve e resultados naturais.
+              Cada atendimento é feito com atenção aos detalhes, conforto e uma estética que realça a expressão única de cada cliente.
+            </p>
+            <ul class="about-list">
+              <li>Alongamento com técnica precisa e segura</li>
+              <li>Visual clean, sofisticado e de longa duração</li>
+              <li>Atendimento em Porto Alegre e região metropolitana</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 3: 3 cards de antes e depois -->
+      <section class="results" id="resultados">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Transformações</p>
+            <h2>Antes e depois em destaque</h2>
+          </div>
+
+          <div class="results-grid">
+            <article class="result-card" data-compare>
+              <div class="compare-frame">
+                <div class="before-panel is-visible">
+                  <img
+                    src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80"
+                    alt="Antes do tratamento"
+                  />
+                  <span>Antes</span>
+                </div>
+                <div class="after-panel">
+                  <img
+                    src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80"
+                    alt="Depois do tratamento"
+                  />
+                  <span>Depois</span>
+                </div>
+              </div>
+              <h3>Maria Helena</h3>
+              <button class="compare-toggle" type="button">Mostrar depois</button>
+            </article>
+
+            <article class="result-card" data-compare>
+              <div class="compare-frame">
+                <div class="before-panel is-visible">
+                  <img
+                    src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80"
+                    alt="Antes do tratamento"
+                  />
+                  <span>Antes</span>
+                </div>
+                <div class="after-panel">
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80"
+                    alt="Depois do tratamento"
+                  />
+                  <span>Depois</span>
+                </div>
+              </div>
+              <h3>Julia B.</h3>
+              <button class="compare-toggle" type="button">Mostrar depois</button>
+            </article>
+
+            <article class="result-card" data-compare>
+              <div class="compare-frame">
+                <div class="before-panel is-visible">
+                  <img
+                    src="https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=800&q=80"
+                    alt="Antes do tratamento"
+                  />
+                  <span>Antes</span>
+                </div>
+                <div class="after-panel">
+                  <img
+                    src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
+                    alt="Depois do tratamento"
+                  />
+                  <span>Depois</span>
+                </div>
+              </div>
+              <h3>Carla S.</h3>
+              <button class="compare-toggle" type="button">Mostrar depois</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 4: depoimentos de clientes com texto e vídeo -->
+      <section class="testimonials" id="depoimentos">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Histórias reais</p>
+            <h2>Depoimentos de clientes</h2>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <h3>Fernanda M.</h3>
+              <p>
+                “Fiquei muito satisfeita com o resultado! Os cílios ficaram naturais, leves e com um acabamento impecável.”
+              </p>
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/aqz-KE-bpKQ?si=G0ZPECCWS_RqH0Pl"
+                  title="Depoimento da cliente Fernanda"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <h3>Patrícia R.</h3>
+              <p>
+                “O atendimento foi acolhedor e profissional. O visual ficou lindo e extremamente natural, perfeito para o dia a dia.”
+              </p>
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/ysz5S6PUM-U?si=u2Okwj4s0ZPVtxGu"
+                  title="Depoimento da cliente Patrícia"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <h3>Marina L.</h3>
+              <p>
+                “Adorei a delicadeza na execução e a atenção ao formato do meu rosto. O resultado ficou com um brilho muito bonito.”
+              </p>
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/wj7A6i7mRik?si=elvHMBPUx8QmF6hQ"
+                  title="Depoimento da cliente Marina"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <h3>Ana B.</h3>
+              <p>
+                “A aparência ficou bem sofisticada e elegante. Saí do atendimento confiante e recebendo vários elogios.”
+              </p>
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/1w7OgIMMRc4?si=LgXshIZf5Mfo8nBu"
+                  title="Depoimento da cliente Ana"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <h3>Gislaine P.</h3>
+              <p>
+                “Tive a experiência de uma profissional que entende estética e conforto. Valeu cada minuto do atendimento.”
+              </p>
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/F7Q0bGqX65U?si=CKbV3b2c7fvpJA_i"
+                  title="Depoimento da cliente Gislaine"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 5: formas de atendimento -->
+      <section class="services" id="atendimento">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Atendimento</p>
+            <h2>Formas de atendimento</h2>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <span class="service-icon">🏠</span>
+              <h3>Atendimento domiciliar</h3>
+              <p>Com deslocamento e taxa extra conforme a região, especialmente na Grande Porto Alegre.</p>
+            </article>
+
+            <article class="service-card">
+              <span class="service-icon">✨</span>
+              <h3>Studio exclusivo</h3>
+              <p>Atendimento com ambiente acolhedor, higiene rigorosa e atenção individualizada.</p>
+            </article>
+
+            <article class="service-card">
+              <span class="service-icon">📍</span>
+              <h3>Região metropolitana</h3>
+              <p>Serviço pensado para Porto Alegre, Canoas, Gravataí, Viamão, Sapucaia e entorno.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 6: calendário de dias livres e horários -->
+      <section class="calendar-section" id="agenda">
+        <div class="container calendar-layout">
+          <div>
+            <div class="section-heading left-align">
+              <p class="section-tag">Agenda</p>
+              <h2>Calendário de disponibilidade</h2>
+            </div>
+
+            <div class="calendar" id="calendar" aria-live="polite"></div>
+          </div>
+
+          <aside class="schedule-panel">
+            <h3>Horários disponíveis</h3>
+            <div id="timeSlots" class="time-slots" aria-live="polite"></div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Seção 7: agendamento por dia e horário -->
+      <section class="booking" id="agendar">
+        <div class="container booking-wrapper">
+          <div class="section-heading left-align">
+            <p class="section-tag">Agendamento</p>
+            <h2>Solicite seu horário</h2>
+          </div>
+
+          <form class="booking-form" id="bookingForm">
+            <div class="field-group">
+              <label for="clientName">Nome</label>
+              <input id="clientName" name="clientName" type="text" placeholder="Seu nome" required />
+            </div>
+
+            <div class="field-group">
+              <label for="clientPhone">Telefone</label>
+              <input id="clientPhone" name="clientPhone" type="tel" placeholder="(51) 9 9999-9999" required />
+            </div>
+
+            <div class="field-group">
+              <label for="serviceType">Serviço</label>
+              <select id="serviceType" name="serviceType" required>
+                <option value="Alongamento leve">Alongamento leve</option>
+                <option value="Volume brasileiro">Volume brasileiro</option>
+                <option value="Manutenção">Manutenção</option>
+                <option value="Design de sobrancelha">Design de sobrancelha</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="bookingDay">Dia disponível</label>
+              <select id="bookingDay" name="bookingDay" required></select>
+            </div>
+
+            <div class="field-group">
+              <label for="bookingTime">Horário</label>
+              <select id="bookingTime" name="bookingTime" required></select>
+            </div>
+
+            <div class="field-group field-wide">
+              <label for="notes">Observações</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Gostaria de algo específico?"></textarea>
+            </div>
+
+            <button class="button button-primary button-full" type="submit">Enviar agendamento</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Seção 8: formas de pagamento -->
+      <section class="payments" id="pagamentos">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Pagamento</p>
+            <h2>Formas de pagamento</h2>
+          </div>
+
+          <div class="payment-grid">
+            <article class="payment-card">
+              <span class="service-icon">📱</span>
+              <h3>Pix</h3>
+              <p>Pagamento rápido e prático com confirmação imediata.</p>
+            </article>
+
+            <article class="payment-card">
+              <span class="service-icon">💵</span>
+              <h3>Dinheiro</h3>
+              <p>Opção de pagamento direto, com comodidade e simplicidade.</p>
+            </article>
+
+            <article class="payment-card">
+              <span class="service-icon">💳</span>
+              <h3>Débito</h3>
+              <p>Pagamento com cartão de débito em ambiente seguro.</p>
+            </article>
+
+            <article class="payment-card highlight-card">
+              <span class="service-icon">🧾</span>
+              <h3>Crédito</h3>
+              <p>Pagamento com cartão de crédito e taxa adicional de 10%.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé com informações de direitos autorais -->
+    <footer class="site-footer">
+      <div class="container footer-wrapper">
+        <div>
+          <p class="footer-brand">Nail's Design de Cílios</p>
+          <p>© 2026 Vanderlei Strider</p>
+        </div>
+
+        <div class="footer-contact">
+          <p>Telefone: <a href="tel:+5551989727254">51 9 8972-7254</a></p>
+          <p>E-mail: <a href="mailto:studioc447@gmail.com">studioc447@gmail.com</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/5551989727254?text=Ol%C3%A1%2C%20quero%20agendar%20um%20hor%C3%A1rio%20de%20design%20de%20c%C3%ADlios."
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Falar no WhatsApp"
+    >
+      WhatsApp
+    </a>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+
+criar o projeto seguindo estas especificações:
+
+linguagens:
+-html
+-css
+-javascript
+-integrado com github
+-criar documentação necessaria
+-todos códigos "arquivos" devidamente comentado para melhores futuras edições
+-manter uma boa estrutura padrão e facil dos arquivos
+-responsivo para diversos aparelhos
+
+Nicho de negócio:
+-nail's designe de cílios
+
+site deve conter nessa ordem:
+-1 apresentação doprodto (com efeito FADE e com repetição a cada 5 segundos )
+
+-2 card ou div de apresentação da responsavel pelo serviço prestado ( com titulo do nome da pessoa e uma pequena descrição )
+
+-3 3 div's com as seguintes especificações 
+(Nome da cliente, 1° mostra o antes, quando clicado ou precionado mostrar o depois, usar imagens para fazer as comparações )
+
+-4 depoimento de clientes - 5 clientes ( escrito e video / com nomedo cliente real )
+
+-5 Formas de atendimento ( Domicílio "com taxa extra e deslocamento por conta do responsavel"
+
+-6  calendario mostrando dias livres e horários
+
+-7 criar forma de agendamento baseado pelos dias livres
+
+-8 fomas de pagamento ( pix, dinheiro, débito, credito com taxa de 10% )
+
+obs: 
+
+- garantir com perfeição o funcionamento e a comunicação entre os codigos e arquivos, erros atrsam a qualidade, geram duvidas e dispersam asideias do cliente, então evite erros.
+
+- usar toda a estilização seguindo o nicho porém com um belo toque suave feminino, não exagere no rosa.
+
+- estude as nececidades da região metropolitana deporto alegre e crie pequenas opçõe de adição ao site
+
+- direitos autorais dosite são de vanderlei strider - telefone 51 9 89727254 - e-mail: studioc447@gmail.com
