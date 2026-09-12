@@ -609,6 +609,22 @@ textarea {
   border: none;
 }
 
+.booking-feedback {
+  grid-column: 1 / -1;
+  min-height: 1.6rem;
+  color: var(--muted);
+  font-weight: 600;
+  text-align: center;
+}
+
+.booking-feedback.is-success {
+  color: var(--success);
+}
+
+.booking-feedback.is-error {
+  color: var(--primary-dark);
+}
+
 .site-footer {
   border-top: 1px solid rgba(96, 69, 79, 0.12);
   background: rgba(255, 250, 249, 0.9);

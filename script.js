@@ -11,6 +11,8 @@ const timeSlots = document.getElementById('timeSlots');
 const bookingDaySelect = document.getElementById('bookingDay');
 const bookingTimeSelect = document.getElementById('bookingTime');
 const bookingForm = document.getElementById('bookingForm');
+const bookingFeedback = document.getElementById('bookingFeedback');
+const whatsappNumber = '5551989727254';
 
 // Rotação automática dos slides com efeito fade a cada 5 segundos.
 let currentSlideIndex = 0;
@@ -51,6 +53,14 @@ function addFreeDay(dateString, times) {
   freeDays.set(dateString, times);
 }
 
+function formatDateKey(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+
+  return `${year}-${month}-${day}`;
+}
+
 const today = new Date();
 const availableDates = [];
 
@@ -58,7 +68,7 @@ for (let offset = 0; offset < 12; offset += 1) {
   const date = new Date(today);
   date.setDate(today.getDate() + offset);
 
-  const dateString = date.toISOString().split('T')[0];
+  const dateString = formatDateKey(date);
   const isWeekend = date.getDay() === 0 || date.getDay() === 6;
 
   if (!isWeekend) {
@@ -95,19 +105,28 @@ function createCalendar() {
     button.addEventListener('click', () => {
       document.querySelectorAll('.calendar-day').forEach((day) => day.classList.remove('is-selected'));
       button.classList.add('is-selected');
+      bookingDaySelect.value = dateString;
       renderTimeSlots(dateString);
     });
 
     calendarContainer.appendChild(button);
   });
 
-  const firstDay = availableDates[0];
+  const firstDay = bookingDaySelect.value || availableDates[0];
   const firstButton = document.querySelector(`[data-date="${firstDay}"]`);
   if (firstButton) {
     firstButton.classList.add('is-selected');
     renderTimeSlots(firstDay);
   }
 }
+
+bookingDaySelect.addEventListener('change', () => {
+  const selectedDay = bookingDaySelect.value;
+  document.querySelectorAll('.calendar-day').forEach((day) => {
+    day.classList.toggle('is-selected', day.dataset.date === selectedDay);
+  });
+  renderTimeSlots(selectedDay);
+});
 
 function renderTimeSlots(dateString) {
   const slots = freeDays.get(dateString) || [];
@@ -174,17 +193,29 @@ bookingForm.addEventListener('submit', (event) => {
   const time = bookingTimeSelect.value;
 
   if (!name || !phone || !day || !time) {
-    alert('Preencha todos os campos para concluir o agendamento.');
+    bookingFeedback.textContent = 'Preencha nome, telefone, dia e horário para continuar.';
+    bookingFeedback.className = 'booking-feedback is-error';
     return;
   }
 
+  const service = document.getElementById('serviceType').value;
+  const notes = document.getElementById('notes').value.trim();
   const dateText = new Date(`${day}T12:00:00`).toLocaleDateString('pt-BR', {
     weekday: 'long',
     day: '2-digit',
     month: 'long'
   });
+  const message = [
+    'Olá, Kemili! Gostaria de solicitar um agendamento.',
+    `Nome: ${name}`,
+    `Telefone: ${phone}`,
+    `Serviço: ${service}`,
+    `Data: ${dateText}`,
+    `Horário: ${time}`,
+    notes ? `Observações: ${notes}` : ''
+  ].filter(Boolean).join('\n');
 
-  alert(`Agendamento confirmado para ${name}! Dia ${dateText} às ${time}. Entraremos em contato pelo telefone ${phone}.`);
-  bookingForm.reset();
-  createCalendar();
+  bookingFeedback.textContent = 'Solicitação preparada. Você será direcionada ao WhatsApp para confirmar o horário.';
+  bookingFeedback.className = 'booking-feedback is-success';
+  window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
 });
